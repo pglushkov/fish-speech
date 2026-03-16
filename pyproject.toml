@@ -16,6 +16,7 @@ dependencies = [
     "omegaconf",
     "einops>=0.7.0",
     "einx[torch]>=0.2.2",
+    "descript-audiotools",
 ]
 
 [tool.setuptools.packages.find]
