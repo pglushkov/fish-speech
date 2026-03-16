@@ -17,6 +17,7 @@ dependencies = [
     "einops>=0.7.0",
     "einx[torch]>=0.2.2",
     "descript-audiotools",
+    "descript-audio-codec",
 ]
 
 [tool.setuptools.packages.find]
