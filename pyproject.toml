@@ -1,23 +1,26 @@
- # Inference-only version of fish-speech
- # Trimmed down to only include dependencies needed for the DAC codec
- # Original project: https://github.com/fishaudio/fish-speech
- [project]
- name = "fish-speech"
- version = "2.0.0"
- description = "Fish Speech - inference-only codec package"
- readme = "README.md"
- license = { text = "Fish Audio Research License" }
- requires-python = ">=3.12"
- authors = [{ name = "Fish Audio", email = "oss@fish.audio" }]
- dependencies = [
-     "torch",
-     "numpy",
-     "hydra-core>=1.3.2",
-     "omegaconf",
-     "einops>=0.7.0",
-     "einx[torch]>=0.2.2",
- ]
+# Inference-only version of fish-speech
+# Trimmed down to only include dependencies needed for the DAC codec
+# Original project: https://github.com/fishaudio/fish-speech
+[project]
+name = "fish-speech"
+version = "2.0.0"
+description = "Fish Speech - inference-only codec package"
+readme = "README.md"
+license = { text = "Fish Audio Research License" }
+requires-python = ">=3.12"
+authors = [{ name = "Fish Audio", email = "oss@fish.audio" }]
+dependencies = [
+    "torch",
+    "numpy",
+    "hydra-core>=1.3.2",
+    "omegaconf",
+    "einops>=0.7.0",
+    "einx[torch]>=0.2.2",
+]
 
- [tool.setuptools.packages.find]
- where = ["."]
- include = ["fish_speech*"]
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["fish_speech*"]
+
+[tool.setuptools.package-data]
+"fish_speech.configs" = ["*.yaml"]
